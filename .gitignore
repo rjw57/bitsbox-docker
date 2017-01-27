@@ -1,0 +1,12 @@
+# Python bytecode
+*.pyc
+__pycache__
+
+# Setuptools
+build
+dist
+*.egg-info
+
+*.sqlite
+.eggs
+bitsbox/frontend/static
