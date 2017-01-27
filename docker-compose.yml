@@ -5,6 +5,12 @@ volumes:
   postgres-data:
 
 services:
+  data:
+    image: ubuntu
+    volumes:
+      - postgres-data:/data/postgres
+    command: "true"
+
   web:
     restart: always
     build: ./web
