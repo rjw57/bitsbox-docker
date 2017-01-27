@@ -1,9 +1,24 @@
-Flask==0.10.1
-Flask-SQLAlchemy==2.0
-Jinja2==2.7.3
-MarkupSafe==0.23
-SQLAlchemy==0.9.9
-Werkzeug==0.10.4
-gunicorn==19.3.0
-itsdangerous==0.24
-psycopg2==2.6
+gunicorn
+psycopg2
+
+# These are requirements we know we'll need for the webapp so we might as well
+# install them here where we have the opportunity to pin their versions.
+
+flask
+flask-debugtoolbar
+flask-graphql
+flask-migrate
+flask-shell-ipython
+flask-sqlalchemy
+
+graphene>=1.0
+graphene_sqlalchemy
+sqlalchemy
+sqlalchemy-utils
+
+furl
+python-dateutil
+pyyaml
+
+future
+
