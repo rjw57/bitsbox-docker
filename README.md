@@ -15,14 +15,15 @@ $ docker-compose exec web ./runflask.sh bitsbox importlayouts layouts.yaml
 
 ## Backup/restore
 
-This doesn't work :(
+Dump datavase from
 
 ```console
 $ docker-compose exec postgres \
-	pg_dump -Upostgres --clean --format=tar postgres >backup.tar
+	pg_dumpall -Upostgres --clean >backup.sql
 ```
 
+Restore using local psql client
+
 ```console
-$ docker-compose exec postgres \
-	pg_restore -Upostgres --format=tar --dbname=postgres <backup.tar
+$ psql -h $(docker-machine ip) -U postgres -f backup.sql
 ```
