@@ -1,0 +1,25 @@
+.divider-10{
+  width:100%;
+  min-height:1px;
+  margin-top:10px;
+  margin-bottom:10px;
+  display:inline-block;
+  position:relative;
+}
+
+.divider-5{
+  width:100%;
+  min-height:1px;
+  margin-top:5px;
+  margin-bottom:5px;
+  display:inline-block;
+  position:relative;
+}
+
+.flash-messages {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 50px;
+  padding: 10px 0;
+}
