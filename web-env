@@ -1,5 +1,5 @@
 # Environment variables for running the webapp
-DB_NAME=postgres
-DB_USER=postgres
+DB_NAME=bitsbox
+DB_USER=bitsbox
 DB_SERVICE=postgres
 DB_PORT=5432

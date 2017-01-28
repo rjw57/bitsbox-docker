@@ -51,14 +51,16 @@ def _gen_token(entropy):
 def gen_secrets(pn):
     secret_key = _gen_token(64)
     db_pass = _gen_token(32)
+    postgres_pass = _gen_token(32)
 
     print('Writing secrets to {}'.format(pn))
     with open(pn, 'w') as fobj:
         fobj.write(textwrap.dedent('''
         DB_PASS={db_pass}
-        POSTGRES_PASSWORD={db_pass}
+        POSTGRES_PASSWORD={postgres_pass}
         SECRET_KEY={secret_key}
-        ''').lstrip().format(db_pass=db_pass, secret_key=secret_key))
+        ''').lstrip().format(
+            db_pass=db_pass, secret_key=secret_key, postgres_pass=postgres_pass))
 
 def gen_htpasswd(pn, user):
     passwd = _gen_token(8)
